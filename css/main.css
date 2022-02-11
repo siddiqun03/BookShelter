@@ -52,5 +52,101 @@
 }
 .body {
   font-family: "Rubik";
+}
+.login-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 190px;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/Login.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+.login-box {
+  width: 300px;
+  min-height: 323px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logInLogo {
+  margin-bottom: 25px;
+}
+.login-form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.userName {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.password {
+  margin-top: 10px;
+  margin-bottom: 21.5px;
+}
+.password,
+.userName {
+  width: 100%;
+  max-width: 300px;
+  padding: 13px 12px 12px 35px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+.loginBtn {
+  width: 100%;
+  padding: 11px 0px;
+  margin-top: 21.5px;
+  margin-bottom: 5.5px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  /* Words style: */
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0d75ff;
+}
+.forgetPasswor {
+  margin-top: 5.5px;
+  font-family: Montserrat;
+  font-style: normal;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-left: auto;
+  text-decoration: none;
+}
+.userIcon::before{
+    content: url('../img/userIcon.svg');
+    position: absolute;
+    top: 37px;
+    left: 10px;
+}
+.passworIcon::before{
+    content: url('../img/lockIcon.svg');
+    position: absolute;
+    top: 105px;
+    left: 10px;
 }

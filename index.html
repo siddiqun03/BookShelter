@@ -8,7 +8,21 @@
     <title>Log In</title>
 </head>
 <body class="body">
-
+    <main class="login-main">
+        <section class="container login-container">
+            <div class="login-box">
+                <img class="logInLogo" src="./img/logInLogo.svg" alt="Log in logo !" width="225" height="44">
+                <form method="post" class="login-form">
+                    <span class="userIcon"></span>
+                    <span class="passworIcon"></span>
+                    <input class="userName" type="text" placeholder="Username" required>
+                    <input class="password" type="password" placeholder="Password" required>
+                    <button class="loginBtn" type="submit">Login</button>
+                </form>
+                <a href="#" class="forgetPasswor">Forget Password</a>
+            </div>
+        </section>
+    </main>
     <script src="./js/login.js"></script>
 </body>
 </html>
