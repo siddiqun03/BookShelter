@@ -14,6 +14,7 @@ form.addEventListener("submit", function (evt) {
 
   // * Try/Catch:
   try {
+    // * fetch API:
     fetch("https://reqres.in/api/login", {
       method: "POST",
       headers: {
@@ -26,6 +27,7 @@ form.addEventListener("submit", function (evt) {
     })
       .then((res) => res.json())
       .then((data) => {
+        // * check fetch information:
         if (data?.token) {
           // * Local storage:
           window.localStorage.setItem("token", data.token);
