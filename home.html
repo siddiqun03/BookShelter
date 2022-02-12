@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/home.css" />
     <title>Bookshelter</title>
   </head>
-  <body class="body body-dark">
+  <body class="body">
     <header class="home-header">
       <nav class="nav nav-container dark-bg-black">
         <a class="home-logo" href="#"
@@ -28,13 +28,13 @@
           />
         </form>
         <div class="nav-left">
-          <button class="dark-mode-icon"></button>
+          <button class="dark-mode-icon darkmoonbg"></button>
           <button class="LogOutBtn" onclick="clearToken()">Log out</button>
         </div>
       </nav>
       <div class="nav-container header-bottom dark-box-sh">
         <div class="header-bottom-box">
-          <p class="total-book dark-color">Showing 18 Result(s)</p>
+          <p class="total-book dark-color">Showing 0 Result(s)</p>
           <button class="sortByNew">Order by newest</button>
         </div>
       </div>
@@ -52,9 +52,12 @@
         </ul>
       </section>
       <section class="books dark-box-sh">
-        <ul class="books-list">
+        <div class="books-box">
+          <ul class="books-list">
+
+          </ul>
           
-        </ul>
+        </div>
       </section>
       <span class="overlay hidden" onclick="closeModal()"></span>
       <div class="modall hidden">
@@ -88,11 +91,12 @@
               tenetur? Incidunt saepe ea voluptas tempora, minima assumenda nemo
               id blanditiis cupiditate?
             </p>
-            <button class="book-read">Read</button>
+            <a class="book-read modal-read">Read</a>
           </div>
         </div>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/home.js"></script>
   </body>
 </html>
