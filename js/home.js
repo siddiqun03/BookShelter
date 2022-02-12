@@ -51,11 +51,9 @@ const getBooksApi = async function (book) {
     elTotalBook.textContent = `Showing ${date.items.length} Result(${date.totalItems})`;
     elTotalBook.style.color = "green";
     mainArr = date.items;
-    console.log(mainArr);
-    elBooksList.innerHTML= null
+    elBooksList.innerHTML = null;
     renderBooks(date.items, elBooksList);
   } catch (error) {
-    console.log(error);
     elTotalBook.textContent = `Kino topilmadi`;
     elTotalBook.style.color = "red";
     elBooksList.innerHTML = null;
@@ -66,7 +64,7 @@ const renderBooks = (arr, elemente) => {
   elBooksList.innerHTML = null;
 
   // * For each array:
-  arr?.forEach((element) => {
+  arr.forEach((element) => {
     // * create element:
     let booksItem = document.createElement("li");
 
@@ -98,19 +96,22 @@ const renderBooks = (arr, elemente) => {
 // * search on time:
 elSearchInput.addEventListener("keyup", () => {
   searchValue = elSearchInput.value;
+
   if (searchValue !== "") {
     getBooksApi(searchValue);
-  }else{
-      elBooksList.innerHTML = null
-      elTotalBook.textContent = `Showing 0 Result(0)`;
-      elTotalBook.style.color = 'red'
+  } else {
+    elBooksList.innerHTML = null;
+    elTotalBook.textContent = `Showing 0 Result(0)`;
+    elTotalBook.style.color = "red";
   }
+  
+  // * Sort by new:
+  sortByNew.addEventListener("click", (evt) => {
+    getBooksApi(searchValue + "&orderBy=newest");
+  });
 });
 
-// * Sort by new:
-sortByNew.addEventListener("click", (evt) => {
-  getBooksApi(searchValue.value + "&orderBy=newest");
-});
+
 
 // * Modal open:
 elBooksList.addEventListener("click", (evt) => {
@@ -201,3 +202,4 @@ darkModeBtn.addEventListener("click", () =>
 renderBookmark(bookmarkArr);
 
 // * pagenation:
+//  * not pagination !
