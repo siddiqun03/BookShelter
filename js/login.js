@@ -25,7 +25,7 @@ form.addEventListener("submit", function (evt) {
         password: passwordValue,
       }),
     })
-      .then((res) => res.json())
+      .then((rest) => rest.json())
       .then((data) => {
         // * check fetch information:
         if (data?.token) {

@@ -51,7 +51,11 @@
   padding: 0;
 }
 .body {
-  font-family: "Rubik";
+  font-family: Rubik;
+}
+
+img {
+  vertical-align: middle;
 }
 .login-main {
   width: 100vw;
@@ -138,15 +142,15 @@
   margin-left: auto;
   text-decoration: none;
 }
-.userIcon::before{
-    content: url('../img/userIcon.svg');
-    position: absolute;
-    top: 37px;
-    left: 10px;
+.userIcon::before {
+  content: url("../img/userIcon.svg");
+  position: absolute;
+  top: 37px;
+  left: 10px;
 }
-.passworIcon::before{
-    content: url('../img/lockIcon.svg');
-    position: absolute;
-    top: 105px;
-    left: 10px;
+.passworIcon::before {
+  content: url("../img/lockIcon.svg");
+  position: absolute;
+  top: 105px;
+  left: 10px;
 }

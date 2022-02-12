@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <title>Bookshelter</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="body body-dark">
+    <header class="home-header">
+      <nav class="nav nav-container dark-bg-black">
+        <a class="home-logo" href="#"
+          ><img
+            class="home-logo dark-img"
+            src="./img/HomeLogo.svg"
+            alt="Home logo !"
+            width="226"
+            height="44"
+        /></a>
+        <form class="nav-center">
+          <span class="search-icon"></span>
+          <input
+            class="searchInput dark-input"
+            type="text"
+            placeholder="Search..."
+          />
+        </form>
+        <div class="nav-left">
+          <button class="dark-mode-icon"></button>
+          <button class="LogOutBtn" onclick="clearToken()">Log out</button>
+        </div>
+      </nav>
+      <div class="nav-container header-bottom dark-box-sh">
+        <div class="header-bottom-box">
+          <p class="total-book dark-color">Showing 18 Result(s)</p>
+          <button class="sortByNew">Order by newest</button>
+        </div>
+      </div>
+    </header>
+    <main class="nav-container home-main">
+      <section class="bookmark dark-box-sh">
+        <div class="bookmark-top">
+          <h2 class="boookmark-top-heading">Bookmarks</h2>
+          <p class="bookmark-top-desc">
+            If you don’t like to read, you haven’t found the right book
+          </p>
+        </div>
+        <ul class="bookmark-list">
+
+        </ul>
+      </section>
+      <section class="books dark-box-sh">
+        <ul class="books-list">
+          
+        </ul>
+      </section>
+      <span class="overlay hidden" onclick="closeModal()"></span>
+      <div class="modall hidden">
+        <div class="modal-top">
+          <p class="modal-header">pyton</p>
+          <button class="modal-close" onclick="closeModal()"></button>
+        </div>
+        <div class="modal-box">
+          <div class="modal-center">
+            <img class="modalImg" src="https://picsum.photos/300/450" alt="" width="300" height="450" />
+            <div class="modal-center-descs">
+              <p class="Published">Published: <span class="PublishedSpan"></span></p>
+              <p class="author">Author: <span class="authorSpan"></span></p>
+              <p class="Categories">Categories: <span class="CategoriesSpan"></span></p>
+              <p class="Publishers">Publishers: <span class="PublishersSpan"></span></p>
+              <p class="Pages-Count">Pages Count: <span class="Pages-CountSpan"></span></p>
+            </div>
+          </div>
+          <div class="modalRight">
+            <p class="modal-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              magni odio est totam aspernatur, natus ut consectetur tempora aut,
+              perspiciatis nobis numquam repellat aliquam! Dolores sed dolor
+              eveniet magni laborum molestiae eaque obcaecati ipsum quisquam at
+              magnam qui reprehenderit, tempore recusandae ratione repellat
+              natus itaque velit placeat voluptate. Vitae, maiores alias rerum a
+              voluptatum necessitatibus atque odio, nesciunt voluptate error sit
+              numquam tempore modi. Similique perferendis totam harum, sed ex
+              exercitationem natus doloribus iusto rem illo debitis libero ut
+              provident et quisquam quasi facere, repellat ipsa qui sapiente
+              tenetur? Incidunt saepe ea voluptas tempora, minima assumenda nemo
+              id blanditiis cupiditate?
+            </p>
+            <button class="book-read">Read</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
 </html>
